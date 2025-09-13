@@ -1,4 +1,4 @@
-from stats import get_book_text, get_num_words, char_count, sorted_list
+import stats
 
 word_count = get_numm_words("books/frankenstein.txt")
 char_dict = char_count("books/frankenstein.txt")
