@@ -22,7 +22,7 @@ def char_count(filepath):
 	for char in lower_b_string:
 		if char not in char_count:
 			char_count[char] = 1
-		elif char in char_count:
+		else:
 			char_count[char] += 1
 
 	return char_count
@@ -37,9 +37,16 @@ def sort_on(items):
 def sorted_list(char_count):
 	sorted_list = []
 	for key,value in char_count.items():
-		sorted_list.append({"char": key,"num": value})
+		sorted_list.append({"char":key, "num": value})
 
 	sorted_list.sort(reverse=True, key=sort_on)
 
 
 	return sorted_list
+
+def list_to_string(sorted_list):
+	result_string = ""
+	for item in sorted_list:
+		if item['char'].isalpha():
+			result_string += f"{item['char']} : {item['num']}\n"
+	return result_string
