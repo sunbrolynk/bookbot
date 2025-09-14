@@ -1,8 +1,8 @@
 from stats import *
 import sys
 
-word_count = get_num_words()
-char_dict = char_count()
+word_count = get_num_words(sys.argv[1])
+char_dict = char_count(sys.argv[1])
 sorted_chars = sorted_list(char_dict)
 
 
