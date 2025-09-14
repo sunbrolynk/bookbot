@@ -2,7 +2,7 @@ from stats import *
 import sys
 
 if len(sys.argv) != 2:
-	print("Usage: python main.py <path-to-book>")
+	print("Usage: python3 main.py <path-to-book>")
 	sys.exit(1)
 
 word_count = get_num_words(sys.argv[1])
