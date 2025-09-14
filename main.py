@@ -1,14 +1,17 @@
 from stats import *
+import sys
 
-word_count = get_num_words("books/frankenstein.txt")
-char_dict = char_count("books/frankenstein.txt")
+word_count = get_num_words()
+char_dict = char_count()
 sorted_chars = sorted_list(char_dict)
 
 
-
+if len(sys.argv) != 2:
+	print("Usage: python main.py <path-to-book>")
+	sys.exit(1)
 
 print("============ BOOKBOT ============")
-print("Analyzing book found at books/frankenstein.txt...")
+print(f"Analyzing book found at {sys.argv[1]}...")
 print("----------- Word Count ----------")
 
 print(f"Found {word_count} total words")
