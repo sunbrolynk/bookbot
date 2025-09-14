@@ -44,9 +44,4 @@ def sorted_list(char_count):
 
 	return sorted_list
 
-def list_to_string(sorted_list):
-	result_string = ""
-	for item in sorted_list:
-		if item['char'].isalpha():
-			result_string += f"{item['char']} : {item['num']}\n"
-	return result_string
+
